@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [App\Http\Controllers\Customer::class, 'index'])->name('home');
+Route::get('export/', [App\Http\Controllers\Export::class, 'index'])->name('export');
 
 Route::prefix('customers')->group(function () {
     Route::post('add/', [App\Http\Controllers\Customer::class, 'add'])->name('customers.add');
